@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cheer.projectmyself.user.mapper.UserMapper">
+    <insert id="insert">
+    insert into user values(#{id}, #{name}, #{password}, #{member})
+	</insert>
+
+    <delete id="delete">
+        delete from user where id = #{id}
+    </delete>
+
+    <update id="update">
+        update emp set name = #{name}, password = #{password}, member = #{member}
+        where
+	    id = #{id}
+    </update>
+    
+    <select id="getUser" resultType="User">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="getList" resultType="User">
+        select * from user
+    </select>
+
+    <select id="getCountFirst" resultType="int">
+        select * from user where id = #{id}, password = #{password}
+    </select>
+</mapper>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!--是否启用缓存-->
+        <setting name="cacheEnabled" value="true"/>
+        <!--是否启用延时加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+        <!--启用数据库下划线命名到java驼峰式结构命名-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--日志实现-->
+        <setting name="logImpl" value="SLF4J"/>
+    </settings>
+    <!--类型别名-->
+    <typeAliases>
+        <!--按需添加-->
+        <!--<package name="com.cheer.projectmyself.classification.model"></package>-->
+        <!--<package name="com.cheer.projectmyself.comment.model"></package>-->
+        <!--<package name="com.cheer.projectmyself.commodity.model"></package>-->
+        <package name="com.cheer.projectmyself.user.model"></package>
+        <!--<package name="com.cheer.projectmyself.order.model"></package>-->
+        <!--<package name="com.cheer.projectmyself.pay.model"></package>-->
+        <!--<package name="com.cheer.projectmyself.search.model"></package>-->
+        <!--<package name="com.cheer.projectmyself.shopping.model"></package>-->
+    </typeAliases>
+
+</configuration>
